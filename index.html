@@ -56,9 +56,9 @@ input #name:invalid:focus{
                  </label><br />
                  <br />
                                    
-                        <button type="submit" id="submit"
+                        <button type="submit" id="submit" onclick="check()">Submit </button>
+
                            <!-- class="w-fit rounded-lg shadow-lg px-8 py-4 bg-blue-500 text-white hover:bg=green-400 focus:outline-none focus:shadow-outline transition" -->
-                            onclick="check()">Submit </button>
                         </form>
 
                     </div>
@@ -75,7 +75,7 @@ input #name:invalid:focus{
       email.addEventListener('input',() => validate(email));
 
       const acceptTerms=document.getElementById('accept-terms');
-      acceptTerms.addEventListener('Onclick',() => validate(acceptTerms));
+      acceptTerms.addEventListener('Onclick',() => validate(accept-terms));
       
       const submit=document.getElementById('submit');
       submit.addEventListener('click',() => validate(email))
@@ -83,7 +83,7 @@ input #name:invalid:focus{
 
       function validate(element){
          if(element.validity.typeMismatch){
-            element.setCustomValidity("Enter ypur email in correct format");
+            element.setCustomValidity("Enter ypur email id in correct format");
             element.reportValidity();
         } else{
             element.setCustomValidity('');
