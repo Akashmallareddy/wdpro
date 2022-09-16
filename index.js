@@ -1,4 +1,4 @@
-let userForm = document.getElementById("user-form");
+let userForm = document.getElementById("usersform");
 const retrieveEntries = () => {
   let entries = localStorage.getItem("user-entries");
   if (entries) {
