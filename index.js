@@ -45,7 +45,7 @@ const saveUserForm = (event) => {
   const dob = document.getElementById("dob").value;
 
   const acceptedTermsAndConditions =
-    document.getElementById("acceptTerms").checked;
+    document.getElementById("accept-terms").checked;
 
   const entry = {
     name,
