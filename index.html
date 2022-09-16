@@ -3,7 +3,6 @@
 <title>Capstone Project</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.tailwindcss.com"></script>
-<meta charset="UTF-8">
 <style>
 input #name:invalid:focus{
     border: 2px solid blue;
@@ -21,27 +20,27 @@ input #name:invalid:focus{
                 </h2>
                 <div class="divide-y divide-gray-300/50">
                     <div class="space-y-6 py-8 text-base leading-7 text-gray-600">
-                        <form id="user-form" >
+                        <form id="usersform" >
                             <label for="name" class="text-md w-40 inline-block font-medium leading-5 text-gray-700">
                                 Name
                             </label>
                             <input required type="text" id="name" name="name"
                             class="bg-gray-100 inline-block rounded-lg shadow-md px-4 py-3 mb-5 text-base leading-6 placeholder-gray-500"
-                            placeholder="Enter full name"><br />
+                            placeholder="Enter your full name"><br />
 
                             <label for="email" class="text-md w-40 inline-block font-medium leading-5 text-gray-700">
-                                Email
+                                Email ID
                             </label>
                             <input required type="email" id="email" name="email"
                             class="bg-gray-100 inline-block rounded-lg shadow-md px-4 py-3 mb-5 text-base leading-6 placeholder-500"
-                            placeholder="Enter email"><br />
+                            placeholder="Enter your email id"><br />
 
                             <label for="password" class="text-md w-40 inline-block font-medium leading-5 text-gray-700">
                                 Password
                             </label>
                             <input required type="password" id="password" name="password"
                                    class="bg-gray-100 inline-block rounded-lg shadow-md px-4 py-3 mb-5 text-base leading-6 placeholder-gray-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                                   placeholder="Enter password"><br />
+                                   placeholder="Enter your password"><br />
                             <label for="dob" class="text-md w-40 inline-block font-medium leading-5 text-gray-700">
                                 Date of Birth
                             </label>
@@ -49,16 +48,16 @@ input #name:invalid:focus{
                                    class="bg-gray-100 inline-block rounded-lg shadow-md px-4 py-3 mb-5 text-base leading-6 placeholder-gray-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"></br>
 
                            
-                        <input type="checkbox" id="acceptTerms" name="acceptTerms"
+                        <input type="checkbox" id="accept-terms" name="accept-terms"
                             class="bg-gray-100 inline-block rounded-lg shadow-md px-4 py-3 mb-5 text-base leading-6 placeholder-gray-500 ">
-                            <label for="acceptTerms"
+                            <label for="accept-terms"
                             class="text-md w-50 inline-block font-medium leading-5 text-gray-700">
-                            Accept Terms and Conditions
+                            Accept Terms & Conditions
                  </label><br />
                  <br />
                                    
                         <button type="submit" id="submit"
-                            class="w-fit rounded-lg shadow-lg px-8 py-4 bg-blue-500 text-white hover:bg=green-400 focus:outline-none focus:shadow-outline transition"
+                           <!-- class="w-fit rounded-lg shadow-lg px-8 py-4 bg-blue-500 text-white hover:bg=green-400 focus:outline-none focus:shadow-outline transition" -->
                             onclick="check()">Submit </button>
                         </form>
 
@@ -75,7 +74,7 @@ input #name:invalid:focus{
       const email=document.getElementById('email');
       email.addEventListener('input',() => validate(email));
 
-      const acceptTerms=document.getElementById('acceptTerms');
+      const acceptTerms=document.getElementById('accept-terms');
       acceptTerms.addEventListener('Onclick',() => validate(acceptTerms));
       
       const submit=document.getElementById('submit');
@@ -84,7 +83,7 @@ input #name:invalid:focus{
 
       function validate(element){
          if(element.validity.typeMismatch){
-            element.setCustomValidity("Enter email in correct format");
+            element.setCustomValidity("Enter ypur email in correct format");
             element.reportValidity();
         } else{
             element.setCustomValidity('');
@@ -101,6 +100,6 @@ input #name:invalid:focus{
             
         </div>
     </div>
-<script src="ind.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
